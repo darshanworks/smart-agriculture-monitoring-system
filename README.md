@@ -21,7 +21,7 @@ The system monitors real-time environmental conditions such as temperature, humi
 ## 🌐 Live Demo
 
 ```bash
-https://darshanworks.github.io/savora-restaurant-website/
+https://darshanworks.github.io/smart-agriculture-monitoring-system/
 ```
 
 
@@ -90,17 +90,12 @@ Sensors → ESP32 → Firebase Realtime Database → Web Dashboard
 
 ### Dashboard
 
-```md
 ![Dashboard](images/dashboard/dashboard.jpg)
-```
 
 ### Hardware Connections
-Add your hardware setup images here.
 
-```md
 ![Connection 1](images/hardware/connection-1.jpg)
 ![Connection 2](images/hardware/connection-2.jpg)
-```
 
 ---
 
