@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Environment files
+.env
+
+# Firebase
+firebase-debug.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Arduino build files
+*.ino.bin
+*.elf
+*.hex
+
+# Misc
+dist/
+build/

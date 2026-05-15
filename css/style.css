@@ -1,0 +1,209 @@
+:root {
+  --dark-1: #132a13;
+  --dark-2: #31572c;
+  --mid-1: #4f772d;
+  --accent: #90a955;
+  --cream: #ecf39e;
+  --muted: #6b6b6b;
+  --card-bg: #ffffff;
+  --alert-red: #d9534f;
+  --alert-yellow: #f0ad4e;
+  --alert-green: #5cb85c;
+}
+body.light {
+  background: linear-gradient(180deg, #f6f9ef, #f0f6e7);
+  color: var(--dark-1);
+}
+body.dark {
+  background: #08100a;
+  color: #dfeee1;
+  --card-bg: #0c1b12;
+  --muted: #9fbf9a;
+}
+
+body {
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial;
+  margin: 0;
+}
+.container-root {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* header */
+.logo-svg {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  display: inline-block;
+}
+.header-title {
+  font-size: 1.15rem;
+  margin: 0;
+  font-weight: 700;
+  color: inherit;
+}
+.header-sub {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+#note {
+  color: red;
+  font-weight: bold;
+}
+
+/* card */
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 8px 30px rgba(22, 50, 22, 0.04);
+  border: 0;
+}
+body.dark .card {
+  box-shadow: none;
+}
+
+/* gauges */
+.gauge-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.gauge-card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  min-width: 220px;
+  padding: 12px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fff, #fcfff6);
+}
+body.dark .gauge-card {
+  background: linear-gradient(180deg, #07170a, #00110a);
+}
+.sensor-icon {
+  font-size: 28px;
+}
+.gauge-label {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* history controls */
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.controls select {
+  background: var(--accent);
+  color: var(--dark-1);
+  border: 0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* today weather */
+.today-forecast {
+  background: linear-gradient(90deg, #ecf9ea, #f6fff0);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body.dark .today-forecast {
+  background: linear-gradient(90deg, #07170a, #00120a);
+}
+
+/* ALERT BOX (sidebar) */
+.alert-box {
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 64px;
+}
+.alert-box .alert-inner {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+}
+.alert-icon-emoji {
+  font-size: 28px;
+  width: 40px;
+  text-align: center;
+}
+.alert-text {
+  flex: 1;
+}
+.alert-title {
+  font-weight: 700;
+}
+.alert-detail {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* colors for alert states */
+.alert-box.red {
+  background: linear-gradient(90deg, var(--alert-red), #f28b8b);
+  color: #fff;
+}
+.alert-box.yellow {
+  background: linear-gradient(90deg, var(--alert-yellow), #f7c57b);
+  color: #000;
+}
+.alert-box.green {
+  background: linear-gradient(90deg, var(--alert-green), #b7e09b);
+  color: #fff;
+}
+.alert-box.neutral {
+  background: linear-gradient(90deg, #eef6ea, #f7fff3);
+  color: var(--dark-1);
+}
+
+/* notes */
+.clickable {
+  cursor: pointer;
+}
+#notesPreview li {
+  padding: 8px 0;
+  border-bottom: 1px dashed #eee;
+}
+body.dark #notesPreview li {
+  border-color: rgba(255, 255, 255, 0.03);
+}
+
+/* small */
+.btn-outline-theme {
+  background: linear-gradient(90deg, var(--cream), var(--accent));
+  color: var(--dark-1);
+  border: 0;
+}
+.muted {
+  color: var(--muted);
+}
+
+@media (max-width: 991px) {
+  .gauge-card {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+#historyChart {
+  max-width: 100%;
+  height: 400px;
+}
